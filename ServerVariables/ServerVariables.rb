@@ -305,7 +305,7 @@ class SVParameters
   # ■ オブジェクト初期化
   #--------------------------------------------------------------------------
   def initialize(method, keycode)
-    if keycode !~ /\A[a-zA-Z0-9]{2,255}\z/
+    if keycode !~ /\A[a-zA-Z0-9]{32,255}\z/
       raise SVError, "Error: KeycodeFormat"
     end
     @parameters = Hash.new("")
